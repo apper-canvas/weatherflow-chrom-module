@@ -1,13 +1,13 @@
 import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { format } from 'date-fns';
-import ApperIcon from './ApperIcon';
-import SearchBar from './SearchBar';
-import CurrentWeather from './CurrentWeather';
-import ForecastGrid from './ForecastGrid';
-import UnitsToggle from './UnitsToggle';
-import LoadingState from './LoadingState';
-import ErrorState from './ErrorState';
+import { motion } from 'framer-motion';
+import ApperIcon from '@/components/ApperIcon';
+import SearchBar from '@/components/molecules/SearchBar';
+import CurrentWeather from '@/components/organisms/CurrentWeather';
+import ForecastGrid from '@/components/organisms/ForecastGrid';
+import UnitsToggle from '@/components/molecules/UnitsToggle';
+import LoadingState from '@/components/organisms/LoadingState';
+import ErrorState from '@/components/organisms/ErrorState';
+import Button from '@/components/atoms/Button';
 
 const MainFeature = ({
   weatherData,
@@ -82,7 +82,7 @@ const MainFeature = ({
           </div>
           <div className="flex items-center gap-3">
             <UnitsToggle units={units} onToggle={onUnitsToggle} />
-            <motion.button
+            <Button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={onGeolocation}
@@ -90,7 +90,7 @@ const MainFeature = ({
             >
               <ApperIcon name="MapPin" size={18} />
               <span className="hidden sm:inline">My Location</span>
-            </motion.button>
+            </Button>
           </div>
         </motion.div>
 
@@ -117,7 +117,7 @@ const MainFeature = ({
         {/* 5-Day Forecast */}
         <motion.div
           initial={{ y: 30, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
+          animate={{ y: 1, opacity: 1 }}
           transition={{ delay: 0.5 }}
         >
           <h2 className="text-2xl font-display font-semibold text-white mb-6">

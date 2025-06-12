@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { toast } from 'react-toastify';
-import MainFeature from '../components/MainFeature';
-import { weatherService } from '../services';
+import MainFeature from '@/components/organisms/MainFeature';
+import { weatherService } from '@/services';
 
-const Home = () => {
+const HomePage = () => {
   const [weatherData, setWeatherData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -104,4 +104,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default HomePage;

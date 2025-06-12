@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
-import ApperIcon from './ApperIcon';
+import ApperIcon from '@/components/ApperIcon';
+import Button from '@/components/atoms/Button';
 
 const ErrorState = ({ message, onRetry }) => {
   return (
@@ -31,7 +32,7 @@ const ErrorState = ({ message, onRetry }) => {
           {message || "We couldn't fetch the weather data right now. Please check your connection and try again."}
         </p>
         
-        <motion.button
+        <Button
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           onClick={onRetry}
@@ -39,7 +40,7 @@ const ErrorState = ({ message, onRetry }) => {
         >
           <ApperIcon name="RotateCcw" className="w-4 h-4" />
           Try Again
-        </motion.button>
+        </Button>
         
         <div className="mt-8 text-white/60 text-sm font-body">
           <p>Tips:</p>

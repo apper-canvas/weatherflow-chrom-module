@@ -1,7 +1,9 @@
 import { useState, useRef, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import ApperIcon from './ApperIcon';
-import { weatherService } from '../services';
+import { AnimatePresence } from 'framer-motion';
+import ApperIcon from '@/components/ApperIcon';
+import Input from '@/components/atoms/Input';
+import Button from '@/components/atoms/Button';
+import { weatherService } from '@/services';
 
 const SearchBar = ({ onSearch }) => {
   const [query, setQuery] = useState('');
@@ -74,7 +76,7 @@ const SearchBar = ({ onSearch }) => {
             name="Search"
             className="absolute left-4 top-1/2 transform -translate-y-1/2 text-surface-400 w-5 h-5"
           />
-          <input
+          <Input
             ref={inputRef}
             type="text"
             value={query}
@@ -84,7 +86,7 @@ const SearchBar = ({ onSearch }) => {
           />
           <AnimatePresence>
             {query && (
-              <motion.button
+              <Button
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.8 }}
@@ -93,7 +95,7 @@ const SearchBar = ({ onSearch }) => {
                 className="absolute right-4 top-1/2 transform -translate-y-1/2 text-surface-400 hover:text-surface-600 transition-colors"
               >
                 <ApperIcon name="X" className="w-5 h-5" />
-              </motion.button>
+              </Button>
             )}
           </AnimatePresence>
         </div>
@@ -102,7 +104,7 @@ const SearchBar = ({ onSearch }) => {
       {/* Suggestions Dropdown */}
       <AnimatePresence>
         {showSuggestions && (suggestions.length > 0 || loading) && (
-          <motion.div
+          <div
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
@@ -116,7 +118,7 @@ const SearchBar = ({ onSearch }) => {
             ) : (
               <div className="max-h-64 overflow-y-auto">
                 {suggestions.map((suggestion, index) => (
-                  <motion.button
+                  <Button
                     key={`${suggestion.cityName}-${suggestion.country}`}
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
@@ -133,11 +135,11 @@ const SearchBar = ({ onSearch }) => {
                         {suggestion.country}
                       </div>
                     </div>
-                  </motion.button>
+                  </Button>
                 ))}
               </div>
             )}
-          </motion.div>
+          </div>
         )}
       </AnimatePresence>
     </div>

@@ -1,18 +1,18 @@
-import Home from '../pages/Home';
-import NotFound from '../pages/NotFound';
+import HomePage from '@/components/pages/HomePage';
+import NotFoundPage from '@/components/pages/NotFoundPage';
 
 export const routeConfig = {
   home: {
     id: 'home',
     label: 'Home',
     path: '/',
-    component: Home
+component: HomePage
   },
   notFound: {
     id: 'notFound',
     label: 'Not Found',
     path: '*',
-    component: NotFound
+component: NotFoundPage
   }
 };
 

@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { format, addDays } from 'date-fns';
-import ApperIcon from './ApperIcon';
+import ApperIcon from '@/components/ApperIcon';
 
 const ForecastGrid = ({ forecast, units }) => {
   const getWeatherIcon = (condition) => {

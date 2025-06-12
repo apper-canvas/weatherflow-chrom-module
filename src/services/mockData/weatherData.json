@@ -1,0 +1,267 @@
+[
+  {
+    "location": "New York",
+    "current": {
+      "temperature": 22,
+      "feelsLike": 25,
+      "condition": "Partly Cloudy",
+      "icon": "partly-cloudy",
+      "humidity": 65,
+      "windSpeed": 12
+    },
+    "forecast": [
+      {
+        "date": "2024-01-15",
+        "tempHigh": 24,
+        "tempLow": 18,
+        "condition": "Partly Cloudy",
+        "icon": "partly-cloudy",
+        "precipitation": 20
+      },
+      {
+        "date": "2024-01-16",
+        "tempHigh": 26,
+        "tempLow": 19,
+        "condition": "Sunny",
+        "icon": "sunny",
+        "precipitation": 0
+      },
+      {
+        "date": "2024-01-17",
+        "tempHigh": 28,
+        "tempLow": 21,
+        "condition": "Sunny",
+        "icon": "sunny",
+        "precipitation": 5
+      },
+      {
+        "date": "2024-01-18",
+        "tempHigh": 23,
+        "tempLow": 17,
+        "condition": "Light Rain",
+        "icon": "rainy",
+        "precipitation": 80
+      },
+      {
+        "date": "2024-01-19",
+        "tempHigh": 20,
+        "tempLow": 14,
+        "condition": "Cloudy",
+        "icon": "cloudy",
+        "precipitation": 30
+      }
+    ]
+  },
+  {
+    "location": "London",
+    "current": {
+      "temperature": 15,
+      "feelsLike": 13,
+      "condition": "Overcast",
+      "icon": "cloudy",
+      "humidity": 78,
+      "windSpeed": 18
+    },
+    "forecast": [
+      {
+        "date": "2024-01-15",
+        "tempHigh": 16,
+        "tempLow": 12,
+        "condition": "Overcast",
+        "icon": "cloudy",
+        "precipitation": 40
+      },
+      {
+        "date": "2024-01-16",
+        "tempHigh": 14,
+        "tempLow": 9,
+        "condition": "Light Rain",
+        "icon": "rainy",
+        "precipitation": 75
+      },
+      {
+        "date": "2024-01-17",
+        "tempHigh": 17,
+        "tempLow": 11,
+        "condition": "Partly Cloudy",
+        "icon": "partly-cloudy",
+        "precipitation": 25
+      },
+      {
+        "date": "2024-01-18",
+        "tempHigh": 19,
+        "tempLow": 13,
+        "condition": "Sunny",
+        "icon": "sunny",
+        "precipitation": 10
+      },
+      {
+        "date": "2024-01-19",
+        "tempHigh": 18,
+        "tempLow": 12,
+        "condition": "Partly Cloudy",
+        "icon": "partly-cloudy",
+        "precipitation": 35
+      }
+    ]
+  },
+  {
+    "location": "Tokyo",
+    "current": {
+      "temperature": 18,
+      "feelsLike": 20,
+      "condition": "Clear",
+      "icon": "sunny",
+      "humidity": 55,
+      "windSpeed": 8
+    },
+    "forecast": [
+      {
+        "date": "2024-01-15",
+        "tempHigh": 20,
+        "tempLow": 15,
+        "condition": "Clear",
+        "icon": "sunny",
+        "precipitation": 0
+      },
+      {
+        "date": "2024-01-16",
+        "tempHigh": 22,
+        "tempLow": 16,
+        "condition": "Sunny",
+        "icon": "sunny",
+        "precipitation": 5
+      },
+      {
+        "date": "2024-01-17",
+        "tempHigh": 21,
+        "tempLow": 17,
+        "condition": "Partly Cloudy",
+        "icon": "partly-cloudy",
+        "precipitation": 15
+      },
+      {
+        "date": "2024-01-18",
+        "tempHigh": 19,
+        "tempLow": 14,
+        "condition": "Cloudy",
+        "icon": "cloudy",
+        "precipitation": 45
+      },
+      {
+        "date": "2024-01-19",
+        "tempHigh": 17,
+        "tempLow": 12,
+        "condition": "Light Rain",
+        "icon": "rainy",
+        "precipitation": 70
+      }
+    ]
+  },
+  {
+    "location": "Sydney",
+    "current": {
+      "temperature": 28,
+      "feelsLike": 31,
+      "condition": "Sunny",
+      "icon": "sunny",
+      "humidity": 45,
+      "windSpeed": 15
+    },
+    "forecast": [
+      {
+        "date": "2024-01-15",
+        "tempHigh": 30,
+        "tempLow": 24,
+        "condition": "Sunny",
+        "icon": "sunny",
+        "precipitation": 0
+      },
+      {
+        "date": "2024-01-16",
+        "tempHigh": 32,
+        "tempLow": 26,
+        "condition": "Clear",
+        "icon": "sunny",
+        "precipitation": 5
+      },
+      {
+        "date": "2024-01-17",
+        "tempHigh": 29,
+        "tempLow": 23,
+        "condition": "Partly Cloudy",
+        "icon": "partly-cloudy",
+        "precipitation": 20
+      },
+      {
+        "date": "2024-01-18",
+        "tempHigh": 26,
+        "tempLow": 21,
+        "condition": "Thunderstorms",
+        "icon": "stormy",
+        "precipitation": 90
+      },
+      {
+        "date": "2024-01-19",
+        "tempHigh": 24,
+        "tempLow": 19,
+        "condition": "Light Rain",
+        "icon": "rainy",
+        "precipitation": 65
+      }
+    ]
+  },
+  {
+    "location": "Paris",
+    "current": {
+      "temperature": 12,
+      "feelsLike": 9,
+      "condition": "Light Rain",
+      "icon": "rainy",
+      "humidity": 85,
+      "windSpeed": 22
+    },
+    "forecast": [
+      {
+        "date": "2024-01-15",
+        "tempHigh": 14,
+        "tempLow": 8,
+        "condition": "Light Rain",
+        "icon": "rainy",
+        "precipitation": 85
+      },
+      {
+        "date": "2024-01-16",
+        "tempHigh": 11,
+        "tempLow": 6,
+        "condition": "Heavy Rain",
+        "icon": "rainy",
+        "precipitation": 95
+      },
+      {
+        "date": "2024-01-17",
+        "tempHigh": 16,
+        "tempLow": 10,
+        "condition": "Cloudy",
+        "icon": "cloudy",
+        "precipitation": 40
+      },
+      {
+        "date": "2024-01-18",
+        "tempHigh": 18,
+        "tempLow": 12,
+        "condition": "Partly Cloudy",
+        "icon": "partly-cloudy",
+        "precipitation": 25
+      },
+      {
+        "date": "2024-01-19",
+        "tempHigh": 20,
+        "tempLow": 14,
+        "condition": "Sunny",
+        "icon": "sunny",
+        "precipitation": 10
+      }
+    ]
+  }
+]

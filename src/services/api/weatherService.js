@@ -1,5 +1,9 @@
-import { weatherData } from '../mockData/weatherData.json';
-import { searchSuggestions } from '../mockData/searchSuggestions.json';
+import weatherDataJson from '../mockData/weatherData.json';
+import searchSuggestionsJson from '../mockData/searchSuggestions.json';
+
+// Extract the data from imported JSON
+const weatherData = weatherDataJson.weatherData || weatherDataJson;
+const searchSuggestions = searchSuggestionsJson.searchSuggestions || searchSuggestionsJson;
 
 const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 

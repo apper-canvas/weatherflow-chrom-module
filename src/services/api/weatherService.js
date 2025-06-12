@@ -25,7 +25,7 @@ const convertWindSpeed = (speed, units) => {
 };
 
 export const weatherService = {
-  async getWeatherByCity(cityName, units = 'celsius') {
+async getWeatherByCity(cityName, units = 'celsius') {
     await delay(800);
     
     // Simulate API failure for certain cities
@@ -62,9 +62,42 @@ export const weatherService = {
     };
   },
 
+  async getSunPosition(cityName) {
+    await delay(800);
+    
+    const now = new Date();
+    const today = now.toDateString();
+    
+    // Mock sun position data - in real app would use coordinates and sun calculation library
+    const sunData = {
+      sunrise: new Date(`${today} 06:23:00`),
+      sunset: new Date(`${today} 19:47:00`),
+      solarNoon: new Date(`${today} 13:05:00`),
+      location: cityName,
+      timestamp: now.toISOString()
+    };
+    
+    // Calculate current sun position (0-100, where 50 is solar noon)
+    const dayStart = sunData.sunrise.getTime();
+    const dayEnd = sunData.sunset.getTime();
+    const currentTime = now.getTime();
+    
+    let sunPosition = 0;
+    if (currentTime >= dayStart && currentTime <= dayEnd) {
+      sunPosition = ((currentTime - dayStart) / (dayEnd - dayStart)) * 100;
+    } else if (currentTime > dayEnd) {
+      sunPosition = 100;
+    }
+    
+    return {
+      ...sunData,
+currentPosition: Math.round(sunPosition),
+      isDaytime: currentTime >= dayStart && currentTime <= dayEnd
+    };
+  },
+
   async getWeatherByCoords(latitude, longitude, units = 'celsius') {
     await delay(600);
-    
     // Simulate getting weather for coordinates
     // In a real app, this would use the coordinates to fetch location-specific data
     const locationName = `${latitude.toFixed(2)}, ${longitude.toFixed(2)}`;

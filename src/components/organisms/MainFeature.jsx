@@ -4,6 +4,7 @@ import ApperIcon from '@/components/ApperIcon';
 import SearchBar from '@/components/molecules/SearchBar';
 import CurrentWeather from '@/components/organisms/CurrentWeather';
 import ForecastGrid from '@/components/organisms/ForecastGrid';
+import SunPositionWidget from '@/components/organisms/SunPositionWidget';
 import UnitsToggle from '@/components/molecules/UnitsToggle';
 import LoadingState from '@/components/organisms/LoadingState';
 import ErrorState from '@/components/organisms/ErrorState';
@@ -105,7 +106,7 @@ const MainFeature = ({
         </motion.div>
 
         {/* Current Weather */}
-        <motion.div
+<motion.div
           initial={{ y: 30, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.4 }}
@@ -114,10 +115,20 @@ const MainFeature = ({
           <CurrentWeather data={weatherData?.current} units={units} />
         </motion.div>
 
+        {/* Sun Position Widget */}
+        <motion.div
+          initial={{ y: 30, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.45 }}
+          className="mb-8"
+        >
+          <SunPositionWidget location={weatherData?.location} />
+        </motion.div>
+
         {/* 5-Day Forecast */}
         <motion.div
           initial={{ y: 30, opacity: 0 }}
-          animate={{ y: 1, opacity: 1 }}
+          animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.5 }}
         >
           <h2 className="text-2xl font-display font-semibold text-white mb-6">

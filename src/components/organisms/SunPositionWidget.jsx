@@ -11,14 +11,15 @@ const SunPositionWidget = ({ location }) => {
   useEffect(() => {
     if (!location) return;
 
-    const fetchSunData = async () => {
+const fetchSunData = async () => {
       try {
         setLoading(true);
         setError(null);
         const data = await weatherService.getSunPosition(location);
         setSunData(data);
       } catch (err) {
-        setError(err.message);
+        console.error("Error fetching sun data:", err);
+        setError(err.message || 'Failed to load sun position data');
       } finally {
         setLoading(false);
       }

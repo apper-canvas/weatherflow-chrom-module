@@ -20,13 +20,14 @@ const SearchBar = ({ onSearch }) => {
         clearTimeout(timeoutRef.current);
       }
       
-      timeoutRef.current = setTimeout(async () => {
+timeoutRef.current = setTimeout(async () => {
         setLoading(true);
         try {
           const results = await weatherService.searchCities(query);
           setSuggestions(results);
           setShowSuggestions(true);
         } catch (error) {
+          console.error("Search error:", error);
           setSuggestions([]);
         } finally {
           setLoading(false);
